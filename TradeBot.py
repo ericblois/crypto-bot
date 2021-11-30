@@ -19,10 +19,7 @@ except:
     print("No log file of name '" + BALANCE_FILENAME + "' was found. Exiting.")
     sys.exit()
 
-binance_client = Client(
-    "Oe9hWnotHo6Z185qVjQpnZuGi91sUGXEBqbaTDqUXDQq4ejEyfaFEpjBt5jRKKPI",
-    "tUQK6WSXwj8lrGZjPq7AyKQ0DYBA6uhWRXMg0J1xm99XFMRtqdSHIF3XycduYCf1"
-)
+binance_client = Client()
 
 # Multiplier/divisor for order prices
 SYMBOL = "BNB"

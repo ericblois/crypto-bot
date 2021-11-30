@@ -20,7 +20,13 @@ except:
     print("No log file of name '" + BALANCE_FILENAME + "' was found. Exiting.")
     sys.exit()
 
-ftx_client = ftx.FtxClient(api_key="abgmlrDClo5IxBuqfbEFHYx1yLdaZnb8vOm26_E9", api_secret="sK0ZxL1rnm73xPGbqbAVYGrBoBt4sm6pFsKXYeAj")
+API_STRINGS = open("FTX_API_Key", 'r').readlines()
+for i, string in enumerate(API_STRINGS):
+    API_STRINGS[i] = string.strip()
+
+API_KEY = API_STRINGS[0]
+API_SECRET = API_STRINGS[1]
+ftx_client = ftx.FtxClient(api_key=API_KEY, api_secret=API_SECRET)
 
 # Length of intervals in minutes
 INTERVAL = 1

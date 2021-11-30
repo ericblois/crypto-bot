@@ -7,8 +7,12 @@ from SendEmail import *
 
 # --- CLIENT VARIABLE ---
 
-API_KEY = "abgmlrDClo5IxBuqfbEFHYx1yLdaZnb8vOm26_E9"
-API_SECRET = "sK0ZxL1rnm73xPGbqbAVYGrBoBt4sm6pFsKXYeAj"
+API_STRINGS = open("FTX_API_Key", 'r').readlines()
+for i, string in enumerate(API_STRINGS):
+    API_STRINGS[i] = string.strip()
+
+API_KEY = API_STRINGS[0]
+API_SECRET = API_STRINGS[1]
 ftx_client = ftx.FtxClient(api_key=API_KEY, api_secret=API_SECRET)
 
 # --- CONSTANTS ---

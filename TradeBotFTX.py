@@ -9,8 +9,13 @@ INTERVAL = 1
 NUM_HIST_DATA = 10
 
 
+API_STRINGS = open("FTX_API_Key", 'r').readlines()
+for i, string in enumerate(API_STRINGS):
+    API_STRINGS[i] = string.strip()
 
-ftx_client = ftx.FtxClient(api_key="abgmlrDClo5IxBuqfbEFHYx1yLdaZnb8vOm26_E9", api_secret="sK0ZxL1rnm73xPGbqbAVYGrBoBt4sm6pFsKXYeAj")
+API_KEY = API_STRINGS[0]
+API_SECRET = API_STRINGS[1]
+ftx_client = ftx.FtxClient(api_key=API_KEY, api_secret=API_SECRET)
 
 # Get historical data
 now = time.time()

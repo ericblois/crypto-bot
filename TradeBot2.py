@@ -11,10 +11,7 @@ import sys
 
 # POTENTIAL ERRORS: Rounding (price to 2, other values to 5)
 
-binance_client = Client(
-    "Oe9hWnotHo6Z185qVjQpnZuGi91sUGXEBqbaTDqUXDQq4ejEyfaFEpjBt5jRKKPI",
-    "tUQK6WSXwj8lrGZjPq7AyKQ0DYBA6uhWRXMg0J1xm99XFMRtqdSHIF3XycduYCf1"
-)
+binance_client = Client()
 
 # Multiplier/divisor for order prices
 SYMBOL = "BNB"
